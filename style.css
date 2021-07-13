@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body{
+  margin:0px !important;
+  padding: 0px !important;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+  justify-content: flex-start;
+}
+
+.title h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  padding: 20px;
+  color: blue;
+}
+
+.vert {
+  position: absolute;
+    padding: inherit;
+    transform: rotate(295deg);
+}
+
+.text {
+  z-index: -10;
+  border: 1px solid;
+  border-color: blue;
+  text-transform: uppercase;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  display: table-caption;
+  position: absolute;
+  max-width: min-content;
+  color: blue;
+}
+
+#txt {
+  left: 20px;
+}
+
+#txt1 {
+  bottom: 20px;
+  left: 200px;
+}
+
+#txt2 {
+  bottom: 50px;
+  left:100px;
+}
+
+#txt3 {
+  left: 80vw;
+}
+
+#txt4 {
+  bottom: 80px;
+  left: 70vw;
+}
+
+#txt5 {
+  bottom: 10px;
+  left: 80vw;
+}
+
+.module {
+    height: 100vh;
+    
+    background-image: url(assets/images/background.png); 
+    transition: 1s;
+    -webkit-transition: 0.5s;
+	  -moz-transition: 0.5s;
+	  -o-transition: 0.5s;
+    background-color: white;
+   /* animation: inv-back 1s infinite;*/
+    
+}
+
+@keyframes anim-back {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-100px)
+    }
+}
+
+.start {
+  /*
+    background-image: url(naked-city-shock-corridor.gif), url(naked-city-shock-corridor.gif), url(naked-city-shock-corridor.gif), url(pepsi.gif), url(tenor.gif); */
+    background-repeat:no-repeat;
+    background-position: center, top right, 30px 60px, 600px 200px, 150px 500px;
+    margin: 0;
+    height: 100vh;
+    padding-top: 13px;
+}
+
+
+
+
+
+
+
+@keyframes inv-back {
+    0% {
+        background-color: orangered;
+    }
+    50% {
+        background-color: black;
+    }
+    100% {
+        background-color: blue;
+    }
+}
+
+@keyframes inverter {
+    0% {
+        filter: invert(0%);
+    }
+    50% {
+        filter: invert(100%);
+    }
+    100% {
+        filter: invert(0%);
+    }
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+}
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  line-height: 300px;
+}
+
+#slider ul li img {
+  width: 70%;
+}
+
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: blue;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 10px;
+  color: blue;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
+element.style {
+  width: 500px;
+  height: 500px;
+}
+
+.foo { writing-mode: vertical-lr; }
+
+.container {
+  display: flex;
+  background-color: brown;
+  height: 100%;
+}
+
+.imagens {
+  display: flex;
+  max-width: 70%;
+}
+
+.imagens img {
+  width: 100%;
+}
+
+.player {
+  display: flex;
+  justify-content: center;
+}
+
+audio {
+  filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+  width: 200px;
+  height: 25px;
+}
+
+@media screen and (max-width: 800px) {
+  .title h1 {
+    font-size: 0.5rem;
+  }
+
+  .text {
+    font-size: 0.5rem;
+  }
+
+  #slider ul li {
+    width: 400px;
+    height: 400px;
+  }
+
+  element.style {
+    width: 50px;
+    height: 50px;
+  }
+
+  .start {
+    background-size: 20vh;
+    background-position: 100vh 40vw, 30vh 100vw, 30px 60px, 600px 200px;
+    background-repeat: repeat-x;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title h1 {
+    font-size: 0.5rem;
+  }
+
+  #slider ul li {
+    width: 200px;
+    height: 300px;
+  }
+
+  element.style {
+    width: 50px;
+    height: 50px;
+  }
+
+  .module {
+    background-image: none;
+  }
+}
